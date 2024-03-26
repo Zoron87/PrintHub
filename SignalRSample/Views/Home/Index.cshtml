@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Print Page";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <label for="printerSelect">Choose a Printer:</label>
+        </div>
+        <div class="col-9">
+            <select id="printerSelect">
+                <option>Choose a printer..</option>
+            </select>
+        </div>
+        <div class="col-3">
+            <label for="fileInput">Choose a file:</label>
+        </div>
+        <div class="col-9">
+            <input type="file" id="fileInput">
+        </div>
+
+        <button type="button" class="btn btn-primary col-3" id="sendPrintJobButton">Send Print Job</button>
+
+        <div class="col-12" style="margin-top: 10px; font-weight: bold;">
+            <span id="PrintJobStatus"></span>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 10px; font-weight: bold; color: white;">
+        <div class="col-3">Total Connections:</div>
+        <div class="col-6" id="totalConnections"></div>
+    </div>
+</div>
+
+<script src="~/js/signalr.js"></script>
+<script src="~/js/userPrint.js"></script>
